@@ -7,7 +7,7 @@ import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { InAppBrowser, InAppBrowserOptions  } from '@ionic-native/in-app-browser';
 
 
 @Component({
@@ -17,7 +17,15 @@ export class MyApp {
 
   // make HelloIonicPage the root (or first) page
   rootPage = HelloIonicPage;
-
+  options: InAppBrowserOptions = {
+    location: 'no', 
+    disallowoverscroll: 'no', //iOS only 
+    toolbar: 'no', //iOS only 
+    enableViewportScale: 'no', //iOS only 
+    allowInlineMediaPlayback: 'no',//iOS only 
+    presentationstyle: 'pagesheet',//iOS only 
+    fullscreen: 'yes',//Windows only    
+  };
 
   constructor(
     public platform: Platform,
@@ -26,8 +34,7 @@ export class MyApp {
     public iab: InAppBrowser
   ) {
     this.initializeApp();
-    this.iab.create('http://panel.kuracja.testowa.eu:8000');
-
+    this.iab.create('http://panel.kuracja.testowa.eu:8000', '_self', this.options);
   }
 
   initializeApp() {
