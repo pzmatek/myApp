@@ -3,17 +3,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>InAppBrowser</ion-title>
+    <ion-title>Pani Magister</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-<ion-item>
-  <ion-label floating>URL</ion-label>
-  <ion-input type="url" [(ngModel)]="url"></ion-input>
-</ion-item>
 
-<button ion-button block clear (click)="openWebpage(url)">Open webpage</button>
+
+<button ion-button block clear (click)="openWebpage('http://panel.kuracja.testowa.eu:8000')">START</button>
 
 </ion-content>
