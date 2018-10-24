@@ -34,7 +34,7 @@ export class MyApp {
     public iab: InAppBrowser
   ) {
     this.initializeApp();
-    this.iab.create('http://panel.kuracja.testowa.eu:8000', '_self', this.options);
+    this.iab.create('http://terapie.centi.pl','_self', this.options);
   }
 
   initializeApp() {

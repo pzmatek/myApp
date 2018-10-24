@@ -6,6 +6,6 @@
     "\\src\\pages",
     "\\src\\pages\\hello-ionic"
   ],
-  "SelectedNode": "\\src\\app\\app.html",
+  "SelectedNode": "\\src\\pages\\hello-ionic\\hello-ionic.ts",
   "PreviewInSolutionExplorer": false
 }

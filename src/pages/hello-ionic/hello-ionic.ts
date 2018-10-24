@@ -18,6 +18,6 @@ export class HelloIonicPage {
   };
 
   constructor(private inAppBrowser: InAppBrowser) {
-    this.inAppBrowser.create('http://panel.kuracja.testowa.eu:8000', '_self', this.options);
+    this.inAppBrowser.create('http://terapie.centi.pl', '_self', this.options);
   }
 }
